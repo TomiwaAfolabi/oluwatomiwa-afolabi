@@ -1,0 +1,45 @@
+{
+  "skills": [
+    {
+      "iconName": "icon-park-outline:html-five",
+      "alt": "Html"
+    },
+
+    {
+      "iconName": "teenyicons:tailwind-solid",
+      "alt": "Tailwind CSS"
+    },
+    {
+      "iconName": "teenyicons:css3-outline",
+      "alt": "CSS"
+    },
+    {
+      "iconName": "uil:java-script",
+      "alt": "JavaScript"
+    },
+    {
+      "iconName": "file-icons:vue",
+      "alt": "Vue Js"
+    },
+    {
+      "iconName": "uim:react",
+      "alt": "React Js"
+    },
+    {
+      "iconName": "bi:github",
+      "alt": "Git"
+    },
+    {
+      "iconName": "file-icons:microsoft-excel",
+      "alt": "Excel"
+    },
+    {
+      "iconName": "devicon-plain:java",
+      "alt": "Java"
+    },
+    {
+      "iconName": "logos:nodejs-icon",
+      "alt": "Node Js"
+    }
+  ]
+}
