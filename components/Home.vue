@@ -27,7 +27,7 @@
       class="max-w-full h-[450px] bg-[#EAE3D2] rounded-xl block md:flex mx-auto overflow-scroll mb-10"
     >
       <div
-        class="md:max-w-[500px] h-[50px] md:h-full flex flex-row md:flex-col justify-center md:justify-start border-black border-r-0 md:border-r-2 border-b-[1px] md:border-b-0 gap-2 md:gap-8 md:gap-10 pt-2 md:pt-16  md:pr-[30px] md:pl-[30px] pb-[50px]"
+        class="md:max-w-[500px] h-[50px] md:h-full flex flex-row md:flex-col justify-center md:justify-start border-black border-r-0 md:border-r-2 border-b-[1px] md:border-b-0 gap-2 md:gap-8 md:gap-10 pt-2 md:pt-16 md:pr-[30px] md:pl-[30px] pb-[50px]"
       >
         <div
           class="flex bg-inherit hover:bg-[#D1B399] md:bg-[#D1B399] border-inherit md:border-black px-4 md:px-8 py-2 pt-2 md:pt-4 pb-8 md:pb-2 rounded-lg cursor-pointer"
@@ -100,6 +100,16 @@
               Project Video
             </a>
           </div>
+          <div class="md:mt-8 pt-6 md:pt-0">
+            <p>- Resume</p>
+            <a
+              href="https://docs.google.com/document/d/1u6225f_GzhKGxmQH4KTHL4MOQRBGmmId/edit?usp=sharing&ouid=102466778765595892479&rtpof=true&sd=true"
+              target="_blank"
+              class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
+            >
+              View my Resume
+            </a>
+          </div>
         </div>
         <!-- Elevator Pitch content -->
         <div
@@ -139,12 +149,16 @@
               class="w-[50px] gap-1 justify-center text-center cursor-pointer"
             >
               <Icon :name="skill.iconName" size="2.5em"></Icon>
-              
+
               <p class="text-[17px]">{{ skill.alt }}</p>
             </div>
           </div>
-          <div class="  gap-1 flex justify-center  cursor-pointer">
-            <img  class="w-[100px]" src="~/assets/img/aws-cpp.png" alt="cloud-prac-badge">
+          <div class="gap-1 flex justify-center cursor-pointer">
+            <img
+              class="w-[100px]"
+              src="~/assets/img/aws-cpp.png"
+              alt="cloud-prac-badge"
+            />
           </div>
         </div>
       </div>

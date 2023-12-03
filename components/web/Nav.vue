@@ -47,6 +47,7 @@
             Project
           </li></NuxtLink
         >
+        
       </ul>
 
       <!-- dropdwon icon  -->
