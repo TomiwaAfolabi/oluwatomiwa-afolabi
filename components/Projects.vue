@@ -4,13 +4,19 @@
       class="max-w-full h-[400px] bg-[#EAE3D2] rounded-xl flex flex-col mx-auto overflow-scroll p-4"
     >
       <div class="w-full max-w-[400px] md:max-w-[593px] mt-2 pl-8 pr-2">
-        <div>
+        <div class="flex flex-col gap-4">
           <p class="font-bold underline mb-2">Projects</p>
+          <a
+            class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
+            href="https://rendezvous-eight.vercel.app"
+            target="_blank"
+            ><p>Events Management System</p></a
+          >
           <a
             class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
             href="https://sensational-torrone-2feab3.netlify.app"
             target="_blank"
-            ><p>https://sensational-torrone-2feab3.netlify.app</p></a
+            ><p>Online Store</p></a
           >
         </div>
       </div>
