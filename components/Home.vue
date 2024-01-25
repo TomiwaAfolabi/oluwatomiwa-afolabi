@@ -103,7 +103,7 @@
           <div class="md:mt-8 pt-6 md:pt-0">
             <p>- Resume</p>
             <a
-              href="https://docs.google.com/document/d/1u6225f_GzhKGxmQH4KTHL4MOQRBGmmId/edit?usp=sharing&ouid=102466778765595892479&rtpof=true&sd=true"
+              href="https://drive.google.com/file/d/1aqfmqt2-vpXUKjTxVfALURosl248296t/view?usp=sharing"
               target="_blank"
               class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
             >
