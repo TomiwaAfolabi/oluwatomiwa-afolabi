@@ -15,7 +15,7 @@
 
         <a
           class="cursor-pointer"
-          href="https://github.com/TomiwaAfolabi/oluwatomiwa-portfolio"
+          href="https://github.com/TomiwaAfolabi/"
           target="_blank"
         >
           <Icon name="grommet-icons:github" size="1.5em" />
@@ -47,7 +47,6 @@
             Project
           </li></NuxtLink
         >
-        
       </ul>
 
       <!-- dropdwon icon  -->

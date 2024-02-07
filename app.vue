@@ -11,7 +11,6 @@
 
 <style scoped>
 .body {
-  max-width: 1440px;
   margin: auto;
   width: 100vw;
   height: auto;
