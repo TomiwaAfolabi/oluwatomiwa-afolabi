@@ -8,6 +8,12 @@
           <p class="font-bold underline mb-2">Projects</p>
           <a
             class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
+            href="https://location-tracking-fe.vercel.app/"
+            target="_blank"
+            ><p>Location Tracking Application</p></a
+          >
+          <a
+            class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
             href="https://rendezvous-eight.vercel.app"
             target="_blank"
             ><p>Events Management System</p></a
