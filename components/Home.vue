@@ -11,14 +11,13 @@
       <div class="max-w-[400px] md:max-w-[500px] justify-end text-center">
         <h2 class="underline mt-4">Bio</h2>
         <p class="md:mt-4 mt-0 p-2">
-          Oluwatomiwa Afolabi is an Engineering Intern at Spleet Africa, a
-          leading Proptech solutions company in Nigeria. His passion lies in
-          creating ideas to tackle challenges and engineering world-class
-          products to solve real-life problems. He holds a BSc in Computer
-          Science and Systems Engineering from Middlesex University and has
-          completed training programs outside the tech field, including one as
-          an Assistant Formwork Carpenter through the Lagos State Employment
-          Trust Fund (LSETF) program.
+          Oluwatomiwa Afolabi is a Software Engineer with a passion for creating
+          ideas to tackle challenges and engineering world-class products to
+          solve real-life problems. He holds a certification as an AWS cloud
+          practitioner and a BSc in Computer Science and Systems Engineering
+          from Middlesex University, he has also completed training programs
+          including Google Digital Marketing trainning, Computer training in
+          software engeerng and more.
         </p>
       </div>
     </div>

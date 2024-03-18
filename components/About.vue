@@ -57,7 +57,7 @@
       >
         <div class="h-[300px] overflow-scroll">
           <p class="mb-2">
-            <span class="font-bold">May 2022 – Present </span><br />
+            <span class="font-bold">May 2022 – present </span><br />
             <span>
               ALX Foundations & AWS Cloud Academy, ALX Africa. • Learnt
               self-development skills as well as other leadership qualities
@@ -76,7 +76,7 @@
             </span>
           </p>
           <p class="mb-2">
-            <span class="font-bold">September 2022 – Present </span><br />
+            <span class="font-bold">September 2022 – February 2024 </span><br />
             <span>
               Front-End Developer Intern, Spleet Africa. • Interpretation of
               UX/UI designs from Figma into VueJs code with the use of Tailwind
