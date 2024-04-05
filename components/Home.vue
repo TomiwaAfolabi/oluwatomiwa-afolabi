@@ -4,10 +4,10 @@
     <div
       class="w-full bg-[#EAE3D2] rounded-xl flex flex-col lg:flex-row justify-center"
     >
-      <div class="w-full lg:w-1/2 flex justify-center items-center">
+      <div class="w-full lg:w-1/2 flex justify-center items-center p-4">
         <img
           src="../assets/img/bio-pic.jpg"
-          class="max-w-full md:max-w-[40vw] rounded-t-xl md:rounded-none lg:rounded-xl bg-cover"
+          class="max-w-full md:max-w-[40vw] rounded-xl bg-cover"
         />
       </div>
 
@@ -16,9 +16,9 @@
         <p class="md:mt-4 mt-0 p-2">
           Oluwatomiwa Afolabi is a Software Engineer with a passion for creating
           ideas to tackle challenges and engineering world-class products to
-          solve real-life problems. He holds a certification as an AWS cloud
-          practitioner, AWS solutions Architect and a BSc in Computer Science
-          and Systems Engineering from Middlesex University, he has also
+          solve real-life problems. He holds an AWS Cloud practitioner and AWS
+          Solutions Architect certifcation as well as a BSc in Computer Science
+          and Systems Engineering from Middlesex University. He has also
           completed training programs including Google Digital Marketing
           trainning, Computer training in software engeerng and more.
         </p>
