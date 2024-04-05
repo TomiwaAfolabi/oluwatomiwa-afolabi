@@ -7,7 +7,7 @@
       <div class="w-full lg:w-1/2 flex justify-center items-center">
         <img
           src="../assets/img/bio-pic.jpg"
-          class="max-w-full md:max-w-[40vw] rounded-xl bg-cover"
+          class="max-w-full md:max-w-[40vw] rounded-t-xl md:rounded-none lg:rounded-xl bg-cover"
         />
       </div>
 
