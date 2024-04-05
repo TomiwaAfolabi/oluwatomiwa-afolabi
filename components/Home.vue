@@ -17,10 +17,10 @@
           Oluwatomiwa Afolabi is a Software Engineer with a passion for creating
           ideas to tackle challenges and engineering world-class products to
           solve real-life problems. He holds a certification as an AWS cloud
-          practitioner and a BSc in Computer Science and Systems Engineering
-          from Middlesex University, he has also completed training programs
-          including Google Digital Marketing trainning, Computer training in
-          software engeerng and more.
+          practitioner, AWS solutions Architect and a BSc in Computer Science
+          and Systems Engineering from Middlesex University, he has also
+          completed training programs including Google Digital Marketing
+          trainning, Computer training in software engeerng and more.
         </p>
         <!-- section 2 -->
         <div
