@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-10 flex flex-col gap-20 h-[100vh] px-4">
+  <div class="mt-10 flex flex-col gap-20 px-4">
     <div
-      class="max-w-full h-[400px] bg-[#EAE3D2] rounded-xl flex flex-col mx-auto overflow-scroll p-4"
+      class="w-full h-[400px] bg-[#EAE3D2] rounded-xl flex flex-col items-center mx-auto overflow-scroll"
     >
-      <div class="w-full max-w-[400px] md:max-w-[593px] mt-2 pl-8 pr-2">
+      <div class="mt-2 text-center">
         <div class="flex flex-col gap-4">
           <p class="font-bold underline mb-2">Projects</p>
           <a

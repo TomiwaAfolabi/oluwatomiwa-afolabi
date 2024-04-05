@@ -11,7 +11,7 @@
           </Icon>
         </div>
 
-        <div class="flex gap-2"> 
+        <div class="flex gap-2">
           <p class="text-[10px] md:text-[15px] hidden md:block">Telephone</p>
           <span class="text-[13px] md:text-[15px] underline pt-1 md:pt-0"
             >:+2349056674075</span

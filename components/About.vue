@@ -1,7 +1,7 @@
 <template>
-  <div class="mt-10 flex flex-col gap-20 h-[100vh] px-4">
+  <div class="mt-10 flex flex-col gap-20 px-4">
     <div
-      class="max-w-full h-[400px] bg-[#EAE3D2] rounded-xl flex flex-col mx-auto overflow-scroll"
+      class="w-full h-[400px] bg-[#EAE3D2] rounded-xl flex flex-col mx-auto overflow-scroll"
     >
       <div class="border-black border-b-2 flex justify-center mb-2 p-2">
         <div
@@ -33,10 +33,7 @@
       </div>
 
       <!-- Education Section -->
-      <div
-        v-if="showEducation"
-        class="max-w-[400px] md:max-w-[593px] mt-2 pl-8 pr-2"
-      >
+      <div v-if="showEducation" class="mt-2 pl-8 pr-2">
         <p class="mb-2">
           - B.SC, COMPUTER SCIENCE (SYSTEMS ENGINEERING) Middlesex University
           Mauritius (2018 – 2022) Flic en Flac, Mauritius
@@ -51,10 +48,7 @@
         <p class="mb-2">- ALX Foundations & AWS Cloud Academy</p>
       </div>
       <!-- Experience-section -->
-      <div
-        v-if="showExperience"
-        class="max-w-[400px] md:max-w-[593px] h-[500px] mt-4 pl-8 pr-2"
-      >
+      <div v-if="showExperience" class="h-[500px] mt-4 pl-8 pr-2">
         <div class="h-[300px] overflow-scroll">
           <p class="mb-2">
             <span class="font-bold">May 2022 – present </span><br />
