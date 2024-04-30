@@ -3,7 +3,7 @@
     <div
       class="w-full md:p-4 p-2 flex h-[100px] flex-col gap-2.5 overflow-y-scroll"
     >
-      <p>Oluwatomiwa Afolabi | Jr. Front-End Engineer</p>
+      <p>Oluwatomiwa Afolabi | Front-End Engineer</p>
       <div class="flex gap-2">
         <a
           class="hover:scale-10 cursor-pointer"
