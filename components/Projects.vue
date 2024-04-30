@@ -14,6 +14,12 @@
           >
           <a
             class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
+            href="https://vue-school-project-navy.vercel.app/"
+            target="_blank"
+            ><p>Vue School Project</p></a
+          >
+          <a
+            class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
             href="https://rendezvous-eight.vercel.app"
             target="_blank"
             ><p>Events Management System</p></a
