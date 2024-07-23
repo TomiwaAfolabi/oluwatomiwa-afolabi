@@ -1,0 +1,33 @@
+[
+    {
+    "title": "Location tracking app",
+    "tools": "NextJS - TailwindCSS - Prisma - Postgresql",
+    "img": "assets/img/location-tracker-img.png",
+    "icon": "map:postal-code-prefix",
+    "link":"https://location-tracking-fe.vercel.app/"
+     },
+    {
+    "title": "Vue School Project",
+    "tools": "Nuxt - Vue3 - TailwindCSS - Sanity",
+    "img": "assets/img/location-tracker-img.png",
+    "icon": "file-icons:vue",
+    "link":"https://vue-school-project-navy.vercel.app/"
+    },
+   {
+    "title": "Events Management System",
+    "tools": "NuxtJs- Vue3 - SCSS - Pinia",
+    "img": "assets/img/location-tracker-img.png",
+    "icon": "logos:nuxt",
+    "link":"https://rendezvous-eight.vercel.app"
+    },
+    {
+    "title": "Online Store",
+    "tools": "ReactJS -  Redux - SCSS - firebase - firestore",
+    "img": "assets/img/location-tracker-img.png",
+    "icon": "material-symbols:shopping-cart-outline-sharp",
+    "link":"https://sensational-torrone-2feab3.netlify.app"
+    }
+ ] 
+ 
+    
+  
