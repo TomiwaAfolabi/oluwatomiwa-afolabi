@@ -48,7 +48,8 @@ export default {
 </script>
 
 <style>
-.btn:hover {
+.btn:hover,
+.btn:active {
   box-shadow: 1px 1px 25px 10px rgba(139, 115, 75, 0.4);
 }
 
@@ -63,7 +64,8 @@ export default {
   transition: all 200ms;
 }
 
-.btn:hover:before {
+.btn:hover:before,
+.btn:active:before {
   left: 105%;
 }
 </style>
