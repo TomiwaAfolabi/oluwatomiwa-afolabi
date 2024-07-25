@@ -7,7 +7,6 @@
       to=""
     >
       <div
-        id="project"
         class="relative bg-white/40 p-6 flex flex-col sm:flex-row gap-8 rounded-none sm:rounded-xl justify-center items-center btn cursor-pointer mb-4"
       >
         <div class="w-full h-full absolute hover:opacity-0">
@@ -34,8 +33,12 @@
 import projectsData from "~/static/projects.json";
 export default {
   mounted() {
-    var element = document.getElementById("project");
-    element.addEventListener("touchstart touchend", function (e) {
+    var element = document.getElementsByClassName("btn");
+    element.addEventListener("touchstart", function (e) {
+      e.preventDefault();
+      element.classList.toggle("hover_effect");
+    });
+    element.addEventListener("touchend", function (e) {
       e.preventDefault();
       element.classList.toggle("hover_effect");
     });
@@ -76,7 +79,7 @@ export default {
 .btn.hover_effect {
   left: 105%;
 }
-#project {
+.btn {
   -webkit-user-select: none;
   -webkit-touch-callout: none;
 }
