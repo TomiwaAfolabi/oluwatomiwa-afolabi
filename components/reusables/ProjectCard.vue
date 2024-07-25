@@ -34,14 +34,18 @@ import projectsData from "~/static/projects.json";
 export default {
   mounted() {
     var element = document.getElementsByClassName("btn");
-    element.addEventListener("touchstart", function (e) {
-      e.preventDefault();
-      element.classList.toggle("hover_effect");
-    });
-    element.addEventListener("touchend", function (e) {
-      e.preventDefault();
-      element.classList.toggle("hover_effect");
-    });
+
+    for (var i = 0; i < element.length; i++) {
+      var el = element[i];
+      element[i].addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        el.classList.add("hover_effect");
+      });
+      element[i].addEventListener("touchend", (e) => {
+        e.preventDefault();
+        el.classList.remove(".hover_effect");
+      });
+    }
   },
   data() {
     return {
@@ -60,7 +64,7 @@ export default {
 
 <style>
 .btn:hover,
-.btn.hover_effect {
+.hover_effect {
   box-shadow: 1px 1px 25px 10px rgba(139, 115, 75, 0.4);
 }
 
@@ -76,7 +80,7 @@ export default {
 }
 
 .btn:hover:before,
-.btn.hover_effect {
+.hover_effect {
   left: 105%;
 }
 .btn {
