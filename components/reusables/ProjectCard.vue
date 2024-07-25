@@ -35,11 +35,7 @@ import projectsData from "~/static/projects.json";
 export default {
   mounted() {
     var element = document.getElementById("project");
-    element.addEventListener("touchstart", function (e) {
-      e.preventDefault();
-      element.classList.toggle("hover_effect");
-    });
-    element.addEventListener("touchend", function (e) {
+    element.addEventListener("touchstart touchend", function (e) {
       e.preventDefault();
       element.classList.toggle("hover_effect");
     });
