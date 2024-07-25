@@ -7,6 +7,7 @@
       to=""
     >
       <div
+        id="project"
         class="relative bg-white/40 p-6 flex flex-col sm:flex-row gap-8 rounded-none sm:rounded-xl justify-center items-center btn cursor-pointer mb-4"
       >
         <div class="w-full h-full absolute hover:opacity-0">
@@ -17,7 +18,7 @@
         </div>
 
         <div>
-          <img class="max-w-[200px]" :src="imgInfo[0]" alt="project image" />
+          <img class="max-w-[200px]" :src="imgInfo" alt="project image" />
         </div>
 
         <div class="flex flex-col gap-1">
@@ -32,6 +33,17 @@
 <script>
 import projectsData from "~/static/projects.json";
 export default {
+  mounted() {
+    var element = document.getElementById("project");
+    element.addEventListener("touchstart", function (e) {
+      e.preventDefault();
+      element.classList.toggle("hover_effect");
+    });
+    element.addEventListener("touchend", function (e) {
+      e.preventDefault();
+      element.classList.toggle("hover_effect");
+    });
+  },
   data() {
     return {
       projectsData,
@@ -49,7 +61,7 @@ export default {
 
 <style>
 .btn:hover,
-.btn:active {
+.btn.hover_effect {
   box-shadow: 1px 1px 25px 10px rgba(139, 115, 75, 0.4);
 }
 
@@ -65,7 +77,11 @@ export default {
 }
 
 .btn:hover:before,
-.btn:active:before {
+.btn.hover_effect {
   left: 105%;
+}
+#project {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 </style>
