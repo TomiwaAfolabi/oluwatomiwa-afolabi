@@ -75,7 +75,19 @@
 
           <div class="w-full p-4">
             <!-- portfolio content -->
+
             <div v-if="showPortfolio" class="flex flex-col gap-4">
+              <div class="md:mt-8 pt-6 md:pt-0">
+                <p>- Resume</p>
+                <a
+                  href="https://drive.google.com/file/d/1ASF80I7J9FgQyvJpRXQHkuBmRWLozvua/view?usp=sharing"
+                  target="_blank"
+                  class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
+                >
+                  View my Resume
+                </a>
+              </div>
+
               <div class="md:mt-8 pt-6 md:pt-0">
                 <p>- Team Project Slide deck</p>
                 <a
@@ -95,16 +107,6 @@
                   target="_blank"
                 >
                   Project Video
-                </a>
-              </div>
-              <div class="md:mt-8 pt-6 md:pt-0">
-                <p>- Resume</p>
-                <a
-                  href="https://drive.google.com/file/d/1ASF80I7J9FgQyvJpRXQHkuBmRWLozvua/view?usp=sharing"
-                  target="_blank"
-                  class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
-                >
-                  View my Resume
                 </a>
               </div>
             </div>

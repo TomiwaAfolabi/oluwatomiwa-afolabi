@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10 flex flex-col gap-20 px-4">
+  <div class="h-[100vh] mt-10 mb-10 flex flex-col gap-20 px-4">
     <div
       class="w-full h-[400px] bg-[#EAE3D2] rounded-xl flex flex-col mx-auto overflow-scroll"
     >

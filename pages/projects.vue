@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[100vh]"><Projects /></div>
+  <div><Projects /></div>
 </template>
 
 <script>

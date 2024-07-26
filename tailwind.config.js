@@ -11,7 +11,7 @@ module.exports = {
     screens: {
       xs: "230px",
       // => @media (min-width: 230px) { ... }
-      sm : "430px",
+      sm: "430px",
       // => @media (min-width: 430px) { ... }
 
       md: "768px",
@@ -30,10 +30,6 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
     },
   },
-  extend: {
-    backgroundImage: {
-      hero: "url('../assets/img/portfolio-bg-image.jpg')",
-    },
-  },
+
   plugins: [],
 };

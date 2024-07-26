@@ -3,7 +3,7 @@
     <div
       class="w-full md:p-4 p-2 flex h-[100px] flex-col gap-2.5 overflow-y-scroll"
     >
-      <p>Oluwatomiwa Afolabi | Front-End Engineer</p>
+      <p>Oluwatomiwa Afolabi | Front-End Engineer | AWS Cloud Engineer</p>
       <div class="flex gap-2">
         <a
           class="hover:scale-10 cursor-pointer"
@@ -33,18 +33,19 @@
             Home
           </li></NuxtLink
         >
-        <NuxtLink to="/About"
-          ><li
-            class="hover:bg-[#D1B399] px-8 py-2 pt-2 rounded-lg cursor-pointer hover:scale-110 underline hover:no-underline"
-          >
-            About
-          </li></NuxtLink
-        >
+
         <NuxtLink to="/Projects">
           <li
             class="hover:bg-[#D1B399] px-8 py-2 pt-2 rounded-lg cursor-pointer hover:scale-110 underline hover:no-underline"
           >
             Project
+          </li></NuxtLink
+        >
+        <NuxtLink to="/About"
+          ><li
+            class="hover:bg-[#D1B399] px-8 py-2 pt-2 rounded-lg cursor-pointer hover:scale-110 underline hover:no-underline"
+          >
+            About
           </li></NuxtLink
         >
       </ul>
@@ -63,21 +64,21 @@
           v-if="showDropdown"
         >
           <ul class="block md:hidden gap-4">
-            <NuxtLink to="/"
+            <NuxtLink to="/" @click.prevent="toggleDropdown"
               ><li
                 class="hover:bg-[#EAE3D2] px-8 py-2 pt-4 rounded-lg cursor-pointer"
               >
                 Home
               </li></NuxtLink
             >
-            <NuxtLink to="/projects">
+            <NuxtLink to="/projects" @click.prevent="toggleDropdown">
               <li
                 class="hover:bg-[#EAE3D2] px-8 py-2 pt-4 rounded-lg cursor-pointer"
               >
                 Project
               </li></NuxtLink
             >
-            <NuxtLink to="/about"
+            <NuxtLink to="/about" @click.prevent="toggleDropdown"
               ><li
                 class="hover:bg-[#EAE3D2] px-8 py-2 pt-4 rounded-lg cursor-pointer"
               >

@@ -1,24 +1,22 @@
 <template>
   <div>
     <NuxtLink
-      v-for="(project, i) in projectsData"
+      v-for="(project, i) in projectData"
       :key="i"
       class="w-full relative overflow-hidden"
-      to=""
+      :to="project.link"
     >
       <div
-        class="relative bg-white/40 p-6 flex flex-col sm:flex-row gap-8 rounded-none sm:rounded-xl justify-center items-center btn cursor-pointer mb-4"
+        class="relative bg-white/40 p-2 sm:p-6 flex flex-col sm:flex-row gap-8 rounded-xl justify-center items-center btn cursor-pointer mb-4"
       >
         <div class="w-full h-full absolute hover:opacity-0">
           <Icon
-            class="w-[60px] h-[60px] relative top-[20%]"
+            class="w-[30px] sm:w-[60px] h-[30px] sm:h-[60px] relative top-[40%] md:top-[20%]"
             :name="project.icon"
           />
         </div>
 
-        <div>
-          <img class="max-w-[200px]" :src="imgInfo" alt="project image" />
-        </div>
+        <img class="w-[200px]" :src="`${project.img}`" alt="project-image" />
 
         <div class="flex flex-col gap-1">
           <h1 class="text-xl">{{ project.title || "Project" }}</h1>
@@ -30,7 +28,6 @@
 </template>
 
 <script>
-import projectsData from "~/static/projects.json";
 export default {
   mounted() {
     var element = document.getElementsByClassName("btn");
@@ -47,15 +44,20 @@ export default {
       });
     }
   },
-  data() {
-    return {
-      projectsData,
-    };
+
+  props: {
+    projectData: {
+      type: Array,
+      default: [],
+    },
   },
+
   computed: {
     imgInfo() {
       let imginfo = [];
-      projectsData.map((el) => imginfo.push(el.img.toString()));
+      this.projectData.map((el) => {
+        imginfo.push(el.img);
+      });
       return imginfo;
     },
   },
