@@ -1,26 +1,30 @@
 <template>
-  <div>
-    <NuxtLink
-      v-for="(project, i) in projectData"
-      :key="i"
-      class="w-full relative overflow-hidden"
-      :to="project.link"
-    >
+  <div v-for="(project, i) in projectData" :key="i">
+    <NuxtLink class="w-full relative overflow-hidden" :to="project.link">
       <div
-        class="relative bg-white/40 p-2 sm:p-6 flex flex-col sm:flex-row gap-8 rounded-xl justify-center items-center btn cursor-pointer mb-4"
+        class="relative bg-white/40 p-2 sm:p-6 gap-8 flex justify-center items-center rounded-xl btn cursor-pointer mb-4"
       >
-        <div class="w-full h-full absolute hover:opacity-0">
-          <Icon
-            class="w-[30px] sm:w-[60px] h-[30px] sm:h-[60px] relative top-[40%] md:top-[20%]"
-            :name="project.icon"
+        <ClientOnly
+          ><div class="w-full h-full absolute hover:opacity-0">
+            <Icon
+              class="w-[30px] sm:w-[60px] h-[30px] sm:h-[60px] relative top-[40%] md:top-[20%]"
+              :name="project.icon"
+            ></Icon></div
+        ></ClientOnly>
+
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <img
+            class="max-w-[200px]"
+            :src="`${project.img}`"
+            alt="project-image"
           />
-        </div>
 
-        <img class="w-[200px]" :src="`${project.img}`" alt="project-image" />
-
-        <div class="flex flex-col gap-1">
-          <h1 class="text-xl">{{ project.title || "Project" }}</h1>
-          <p class="text-[12px]">{{ project.tools || "Project tools" }}</p>
+          <div class="flex flex-col gap-1">
+            <h1 class="text-xl">{{ project.title || "Project" }}</h1>
+            <p class="text-[12px]">{{ project.tools || "Project tools" }}</p>
+          </div>
         </div>
       </div>
     </NuxtLink>
@@ -49,16 +53,6 @@ export default {
     projectData: {
       type: Array,
       default: [],
-    },
-  },
-
-  computed: {
-    imgInfo() {
-      let imginfo = [];
-      this.projectData.map((el) => {
-        imginfo.push(el.img);
-      });
-      return imginfo;
     },
   },
 };

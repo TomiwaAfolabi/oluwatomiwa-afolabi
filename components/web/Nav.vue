@@ -1,8 +1,6 @@
 <template>
-  <nav class="w-full flex h-[100px] bg-[#EAE3D2]">
-    <div
-      class="w-full md:p-4 p-2 flex h-[100px] flex-col gap-2.5 overflow-y-scroll"
-    >
+  <nav class="w-full flex h-[150px] sm:h-[120px] bg-[#EAE3D2]">
+    <div class="w-full md:p-4 p-2 flex flex-col gap-2.5 overflow-y-scroll">
       <p>Oluwatomiwa Afolabi | Front-End Engineer | AWS Cloud Engineer</p>
       <div class="flex gap-2">
         <a
