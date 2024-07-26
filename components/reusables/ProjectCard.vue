@@ -44,7 +44,7 @@ export default {
       });
       element[i].addEventListener("touchend", (e) => {
         e.preventDefault();
-        el.classList.remove(".hover_effect");
+        el.classList.remove("hover_effect");
       });
     }
   },
