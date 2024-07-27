@@ -1,6 +1,6 @@
 <template>
   <div v-for="(project, i) in projectData" :key="i">
-    <NuxtLink class="w-full relative overflow-hidden" to="/">
+    <NuxtLink class="w-full relative overflow-hidden" :to="project.link">
       <div
         class="relative bg-white/40 p-2 sm:p-6 gap-8 flex justify-center items-center rounded-xl btn cursor-pointer mb-4"
       >
@@ -34,25 +34,16 @@
 <script>
 export default {
   mounted() {
-    var element = document.getElementsByName(".btn");
+    var element = document.getElementsByClassName("btn")[0];
 
-    for (var i = 0; i < element.length; i++) {
-      var el = element[i];
-
-      element[i].addEventListener("touchstart", (e) => {
-        e.preventDefault();
-
-        if (!el.classList.contains("hover_effect")) {
-          el.classList.add("hover_effect");
-        }
-      });
-      element[i].addEventListener("touchend", (e) => {
-        e.preventDefault();
-        if (el.classList.contains("hover_effect")) {
-          el.classList.remove("hover_effect");
-        }
-      });
-    }
+    element.addEventListener("mouseover", (e) => {
+      e.preventDefault();
+      el.classList.add("hover_effect");
+    });
+    element.addEventListener("mouseout", (e) => {
+      e.preventDefault();
+      el.classList.remove("hover_effect");
+    });
   },
 
   props: {
