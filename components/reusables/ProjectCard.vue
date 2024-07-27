@@ -36,11 +36,11 @@ export default {
   mounted() {
     var element = document.getElementsByClassName("btn")[0];
 
-    element.addEventListener("mouseover", (e) => {
+    element.addEventListener("touchstart", (e) => {
       e.preventDefault();
       el.classList.add("hover_effect");
     });
-    element.addEventListener("mouseout", (e) => {
+    element.addEventListener("touchend", (e) => {
       e.preventDefault();
       el.classList.remove("hover_effect");
     });
