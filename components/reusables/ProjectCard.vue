@@ -34,16 +34,20 @@
 <script>
 export default {
   mounted() {
-    var element = document.getElementsByClassName("btn")[0];
+    var element = document.getElementsByClassName("btn");
 
-    element.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-      el.classList.add("hover_effect");
-    });
-    element.addEventListener("touchend", (e) => {
-      e.preventDefault();
-      el.classList.remove("hover_effect");
-    });
+    for (var i = 0; i < element.length; i++) {
+      var el = element[i];
+      element[i].addEventListener("touchstart", (e) => {
+        console.log(e.type);
+        if (e.type !== "touchstart") {
+          el.classList.add("hover_effect");
+        }
+        if (e.type === "touchstart") {
+          el.classList.remove("hover_effect");
+        }
+      });
+    }
   },
 
   props: {

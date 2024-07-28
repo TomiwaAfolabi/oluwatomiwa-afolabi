@@ -1,6 +1,7 @@
 
 [
     {
+        "id":"lt",
     "title": "Location tracking app",
     "tools": "NextJS - TailwindCSS - Prisma - Postgresql",
     "img": "location-tracker-img.jpg",
@@ -8,6 +9,7 @@
     "link":"https://location-tracking-fe.vercel.app/"
      },
     {
+        "id":"vp",
     "title": "Vue School Project",
     "tools": "NuxtJS - Vue3 - TailwindCSS - Sanity",
     "img": "vue-project.jpg",
@@ -15,6 +17,7 @@
     "link":"https://vue-school-project-navy.vercel.app/"
     },
    {
+    "id":"ems",
     "title": "Events Management System",
     "tools": "NuxtJS - Vue3 - SCSS - Pinia",
     "img": "events-mgt.jpg",
@@ -22,6 +25,7 @@
     "link":"https://rendezvous-eight.vercel.app"
     },
     {
+        "id":"os",
     "title": "Online Store",
     "tools": "ReactJS -  Redux - SCSS - firebase - firestore",
     "img": "react-store.jpg",
