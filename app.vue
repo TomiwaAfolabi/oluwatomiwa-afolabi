@@ -13,6 +13,7 @@
 .body {
   margin: auto;
   width: 100vw;
+  height: 100%;
   background-size: cover;
 }
 </style>

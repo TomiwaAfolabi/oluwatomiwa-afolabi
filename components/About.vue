@@ -1,6 +1,8 @@
 <template>
-  <div class="mt-10 mb-10 flex flex-col gap-20 px-4">
-    <div class="w-full bg-[#EAE3D2] rounded-xl flex flex-col mx-auto p-4">
+  <div class="mt-10 mb-10 h-[100vh] flex flex-col gap-20 px-4 overflow-auto">
+    <div
+      class="w-full bg-[#EAE3D2] rounded-xl flex flex-col mx-auto p-2 sm:p-4"
+    >
       <div class="border-black border-b-2 flex justify-center mb-2 p-2 text-xl">
         <div
           class="flex gap-2 border-black hover:border-inherit border-r-[0.5px] hover:bg-[#D1B399] cursor-pointer"
