@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[100vh] mt-10 mb-10 flex flex-col px-4 overflow-auto">
+  <div class="w-full mt-10 mb-10 flex flex-col px-4 overflow-auto">
     <!-- section 1 -->
     <div
       class="w-full bg-[#EAE3D2] rounded-xl flex flex-col lg:flex-row justify-center"
