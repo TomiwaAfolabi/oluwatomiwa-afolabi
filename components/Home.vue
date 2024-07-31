@@ -43,21 +43,7 @@
 
               <p class="hidden md:block">Portfolio</p>
             </div>
-            <div
-              class="w-full max-w-[250px] flex justify-center hover:bg-[#D1B399] md:bg-[#D1B399] pt-2 md:pt-4 pb-2 rounded-lg cursor-pointer"
-              @click.prevent="toggleElevatorPitch"
-            >
-              <div>
-                <Icon
-                  class="md:mb-1.5 mr-0 md:mr-[8px]"
-                  name="mdi:lightbulb-on"
-                  size="1.6em"
-                ></Icon>
-              </div>
-              <p class="hidden md:block mt-[1.5px] ml-4 md:ml-0">
-                Elevator Pitch
-              </p>
-            </div>
+
             <div
               class="w-full max-w-[250px] flex justify-center hover:bg-[#D1B399] md:bg-[#D1B399] pt-2 md:pt-4 pb-2 rounded-lg cursor-pointer"
               @click.prevent="toggleSkills"
@@ -87,59 +73,8 @@
                   View my Resume
                 </a>
               </div>
-
-              <div class="md:mt-8 pt-6 md:pt-0">
-                <p>- Team Project Slide deck</p>
-                <a
-                  class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
-                  href="https://docs.google.com/presentation/d/1-zeLhJHzB1en4rx5-6lVxwIRuWOIB9u3/edit#sli de=id.p9"
-                  target="_blank"
-                >
-                  Project Slides
-                </a>
-              </div>
-
-              <div class="md:mt-8 pt-6 md:pt-0">
-                <p>- Team Project Video</p>
-                <a
-                  class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
-                  href="https://youtube.com/watch?v=5SGxDzU5vfY&feature=share"
-                  target="_blank"
-                >
-                  Project Video
-                </a>
-              </div>
             </div>
-            <!-- Elevator Pitch content -->
-            <div
-              v-if="showElevatorPitch"
-              class="flex justify-center gap-4 mt-6"
-            >
-              <div class="flex flex-col justify-center">
-                <p class="text-center underline mb-4">Elevator Pitch</p>
-                <div class="block md:hidden">
-                  <a
-                    class="decoration-inherit cursor-pointer hover:text-[#99522C]"
-                    href="https://drive.google.com/file/d/1CE_DXfJ_Mnz-3huDbJXgKVR42QUY8nyH/preview"
-                    target="_blank"
-                    ><p>
-                      -<span class="underline pl-2"
-                        >Link to elevator pitch</span
-                      >
-                    </p></a
-                  >
-                </div>
 
-                <div class="hidden md:block">
-                  <iframe
-                    width="400"
-                    height="300"
-                    src="https://drive.google.com/file/d/1CE_DXfJ_Mnz-3huDbJXgKVR42QUY8nyH/preview"
-                    allow="autoplay"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
             <!-- Skills content -->
             <div
               v-if="showSkills"
