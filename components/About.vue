@@ -33,7 +33,7 @@
       </div>
 
       <!-- Education Section -->
-      <div v-if="showEducation" class="mt-2 pl-8 pr-2 text-xl">
+      <div v-if="showEducation" class="mt-2 pl-8 pr-2 text-xl show_about">
         <p class="mb-2">
           - B.SC, COMPUTER SCIENCE (SYSTEMS ENGINEERING) Middlesex University
           Mauritius (2018 – 2022) Flic en Flac, Mauritius
@@ -49,7 +49,7 @@
       </div>
       <!-- Experience-section -->
       <div v-if="showExperience" class="mt-4 pl-8 pr-2 text-[20px]">
-        <div>
+        <div class="show_about">
           <p class="mb-2">
             <span class="font-bold">May 2022 – present </span><br />
             <span>
@@ -138,4 +138,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.show_about {
+  animation-name: show_about;
+  animation-duration: 1s;
+}
+@keyframes show_about {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style>

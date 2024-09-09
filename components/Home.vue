@@ -7,14 +7,14 @@
       <div
         v-for="(img, i) in images"
         :key="i"
-        class="w-full lg:w-1/2 flex justify-center p-4 myImages fade overflow-auto"
+        class="w-full lg:w-1/2 flex justify-center p-8 myImages fade overflow-auto"
       >
-        <img :src="img" class="lg:max-w-[500px] rounded-xl bg-cover" />
+        <img :src="img" class="w-full lg:h-[100vh] rounded-xl bg-cover" />
       </div>
 
       <div class="w-full lg:w-1/2 items-center text-center">
         <h2 class="underline sm:mt-2">Bio</h2>
-        <p class="md:mt-4 mt-0 p-2">
+        <p class="md:mt-4 mt-0 p-2 show">
           Oluwatomiwa Afolabi is a Software Engineer with a passion for creating
           ideas to tackle challenges and engineering world-class products to
           solve real-life problems. He holds a AWS Cloud practitioner and AWS
@@ -31,7 +31,7 @@
             class="w-full flex flex-row items-center justify-center border-black border-b-[2px] gap-2 md:gap-8 p-4"
           >
             <div
-              class="w-full max-w-[250px] flex justify-center hover:bg-[#D1B399] md:bg-[#D1B399] border-inherit md:border-black pt-2 md:pt-4 pb-2 rounded-lg cursor-pointer"
+              class="w-full max-w-[250px] flex justify-center hover:bg-[#EAE3D2] hover:text-[#99522C] md:bg-[#D1B399] border-inherit md:border-black pt-2 md:pt-4 pb-2 rounded-lg cursor-pointer"
               @click.prevent="togglePortfolio"
             >
               <div>
@@ -46,7 +46,7 @@
             </div>
 
             <div
-              class="w-full max-w-[250px] flex justify-center hover:bg-[#D1B399] md:bg-[#D1B399] pt-2 md:pt-4 pb-2 rounded-lg cursor-pointer"
+              class="w-full max-w-[250px] flex justify-center hover:bg-[#EAE3D2] hover:text-[#99522C] md:bg-[#D1B399] pt-2 md:pt-4 pb-2 rounded-lg cursor-pointer"
               @click.prevent="toggleSkills"
             >
               <div>
@@ -65,11 +65,10 @@
 
             <div v-if="showPortfolio" class="flex flex-col gap-4">
               <div class="md:mt-8 pt-6 md:pt-0">
-                <p>- Resume</p>
                 <a
                   href="https://drive.google.com/file/d/1ASF80I7J9FgQyvJpRXQHkuBmRWLozvua/view?usp=sharing"
                   target="_blank"
-                  class="decoration-inherit cursor-pointer underline hover:text-[#99522C]"
+                  class="decoration-inherit cursor-pointer p-4 hover:bg-[#EAE3D2] bg-[#D1B399] w-4 h-4 hover:text-[#99522C] rounded-lg"
                 >
                   View my Resume
                 </a>
@@ -79,25 +78,24 @@
             <!-- Skills content -->
             <div
               v-if="showSkills"
-              class="flex flex-wrap mt-10 justify-center gap-[25px] overflow-scroll"
+              class="flex flex-wrap mt-10 justify-center gap-[50px] overflow-scroll"
             >
               <div v-for="(skill, index) in skillData.skills" :key="index">
                 <div
-                  class="w-[100px] gap-1 justify-center text-center cursor-pointer"
+                  class="w-[80px] gap-1 justify-center text-center cursor-pointer space"
                 >
                   <Icon :name="skill.iconName" size="4.5em"></Icon>
-
                   <p class="text-[18px]">{{ skill.alt }}</p>
                 </div>
               </div>
-              <div class="gap-1 flex justify-center cursor-pointer">
+              <div class="gap-1 flex justify-center cursor-pointer space">
                 <img
                   class="w-[100px]"
                   src="~/assets/img/aws-cpp.png"
                   alt="cloud-prac-badge"
                 />
               </div>
-              <div class="gap-1 flex justify-center cursor-pointer">
+              <div class="gap-1 flex justify-center cursor-pointer space">
                 <img
                   class="w-[100px]"
                   src="~/assets/img/aws-certified-solutions-architect-associate.png"
@@ -172,15 +170,43 @@ export default {
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
 }
 
+.show {
+  animation-name: show;
+  animation-duration: 5s;
+}
+.space {
+  animation-name: space;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.2;
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes space {
+  0% {
+    scale: 0.9;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.9;
   }
 }
 </style>
