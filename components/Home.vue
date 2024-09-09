@@ -2,17 +2,18 @@
   <div class="w-full mt-10 mb-10 flex flex-col px-4 overflow-auto">
     <!-- section 1 -->
     <div
-      class="w-full bg-[#EAE3D2] rounded-xl flex flex-col lg:flex-row justify-center"
+      class="w-full bg-[#EAE3D2] rounded-xl flex flex-col sm:flex-col-reverse lg:flex-row"
     >
-      <div class="w-full lg:w-1/2 flex justify-center items-center p-4">
-        <img
-          src="../assets/img/bio-pic.jpg"
-          class="max-w-full md:max-w-[40vw] rounded-xl bg-cover"
-        />
+      <div
+        v-for="(img, i) in images"
+        :key="i"
+        class="w-full lg:w-1/2 flex justify-center p-4 myImages fade overflow-auto"
+      >
+        <img :src="img" class="lg:max-w-[500px] rounded-xl bg-cover" />
       </div>
 
       <div class="w-full lg:w-1/2 items-center text-center">
-        <h2 class="underline mt-4">Bio</h2>
+        <h2 class="underline sm:mt-2">Bio</h2>
         <p class="md:mt-4 mt-0 p-2">
           Oluwatomiwa Afolabi is a Software Engineer with a passion for creating
           ideas to tackle challenges and engineering world-class products to
@@ -113,12 +114,18 @@
 
 <script>
 import skillData from "../static/skills.json";
+let slideIndex = 0;
 export default {
+  mounted() {
+    this.showImages();
+  },
+
   data() {
     return {
       showPortfolio: true,
       showElevatorPitch: false,
       showSkills: false,
+      images: ["bio-pic.jpg", "profile-pic_2.jpg", "profile-pic_3.jpg"],
       skillData,
     };
   },
@@ -144,8 +151,36 @@ export default {
         this.showSkills = true;
       }
     },
+    showImages() {
+      let slides = document.getElementsByClassName("myImages");
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(this.showImages, 3000);
+    },
   },
 };
 </script>
 
-<style></style>
+<style>
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style>
