@@ -9,7 +9,10 @@
         :key="i"
         class="w-full lg:w-1/2 flex justify-center p-8 myImages fade overflow-auto"
       >
-        <img :src="img" class="w-full lg:h-[100vh] rounded-xl bg-cover" />
+        <img
+          :src="img"
+          class="w-full h-[60vh] lg:h-[100vh] rounded-xl bg-cover"
+        />
       </div>
 
       <div class="w-full lg:w-1/2 items-center text-center">
