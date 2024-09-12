@@ -1,8 +1,6 @@
 <template>
-  <div class="mt-10 mb-10 flex flex-col gap-20 px-4 py-4 overflow-auto">
-    <div
-      class="bg-[#EAE3D2] rounded-xl flex flex-col items-center mx-auto overflow-hidden p-4"
-    >
+  <div class="mt-10 mb-10 flex flex-col gap-20 px-4 py-4">
+    <div class="bg-[#EAE3D2] rounded-xl flex flex-col items-center mx-auto p-4">
       <div class="mt-2 text-center">
         <div class="flex flex-col gap-4">
           <p class="font-bold underline mb-2">Projects</p>

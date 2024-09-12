@@ -2,7 +2,8 @@
   <div
     class="mx-none md:mx-auto body bg-[url('~/assets/img/portfolio-bg-image.jpg')]"
   >
-    <WebNav />
+    <div class="flex justify-center p-6"><WebNav /></div>
+
     <NuxtPage />
     <WebFooter />
   </div>
@@ -11,8 +12,7 @@
 
 <style scoped>
 .body {
-  margin: auto;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-size: cover;
 }

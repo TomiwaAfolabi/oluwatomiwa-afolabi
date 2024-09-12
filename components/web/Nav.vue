@@ -1,23 +1,36 @@
 <template>
-  <nav class="w-full flex h-[150px] sm:h-[120px] bg-[#EAE3D2]">
-    <div class="w-full md:p-4 p-2 flex flex-col gap-2.5 overflow-y-scroll">
+  <nav
+    class="w-full max-w-[99%] flex h-[150px] sm:h-[120px] bg-[#EAE3D2] rounded-[8px]"
+  >
+    <div class="md:p-4 p-2 flex flex-col gap-2.5 overflow-y-scroll">
       <p>Oluwatomiwa Afolabi | Front-End Engineer | AWS Cloud Engineer</p>
-      <div class="flex gap-2">
-        <a
-          class="hover:scale-10 cursor-pointer"
-          href="https://www.linkedin.com/in/tomiwa-afolabi-41761421a/"
-          target="_blank"
-        >
-          <Icon name="grommet-icons:linkedin" size="1.5em" />
-        </a>
+      <div class="flex gap-2 flex-wrap">
+        <div class="flex gap-2">
+          <a
+            class="hover:scale-10 cursor-pointer"
+            href="https://www.linkedin.com/in/tomiwa-afolabi-41761421a/"
+            target="_blank"
+          >
+            <Icon name="grommet-icons:linkedin" size="1.5em" />
+          </a>
 
-        <a
-          class="cursor-pointer"
-          href="https://github.com/TomiwaAfolabi/"
-          target="_blank"
+          <a
+            class="cursor-pointer"
+            href="https://github.com/TomiwaAfolabi/"
+            target="_blank"
+          >
+            <Icon name="grommet-icons:github" size="1.5em" />
+          </a>
+        </div>
+        <div
+          class="w-full flex justify-start mt-[5px] max-w-[25px] xs:max-w-[50px] h-[15px] xs:h-[20px] rounded-full border-2 border-[#D1B399] bg-[#EAE3D2] transition-all ease-in duration-300"
+          :class="{ 'bg-[#bf7739] justify-end': isTheme }"
         >
-          <Icon name="grommet-icons:github" size="1.5em" />
-        </a>
+          <div
+            class="w-full h-[11px] xs:h-[16px] max-w-[10px] xs:max-w-[20px] bg-[#c98e5a] border-2 border-[#bf7739] rounded-full cursor-pointer"
+            @click="toggleTheme"
+          ></div>
+        </div>
       </div>
     </div>
 
@@ -90,15 +103,27 @@
   </nav>
 </template>
 <script>
+import { theme } from "../../store/theme";
+
 export default {
   data() {
     return {
       showDropdown: false,
     };
   },
+  computed: {
+    isTheme() {
+      return theme.state.isTheme;
+    },
+  },
+
   methods: {
     toggleDropdown() {
       this.showDropdown = !this.showDropdown;
+    },
+    toggleTheme() {
+      theme.commit("switchTheme");
+      console.log(this.isTheme);
     },
   },
 };

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mt-10 mb-10 flex flex-col px-4 py-4 overflow-auto">
+  <div class="w-full mt-10 mb-10 flex flex-col px-4 py-4">
     <!-- section 1 -->
     <div
       class="w-full bg-[#EAE3D2] rounded-xl flex flex-col sm:flex-col-reverse lg:flex-row"
@@ -9,7 +9,7 @@
         :key="i"
         class="w-full lg:w-1/2 flex justify-center p-8 myImages fade overflow-auto"
       >
-        <img :src="img" class="w-full h-[50vh] lg:h-auto rounded-xl bg-cover" />
+        <img :src="img" class="w-full lg:h-auto rounded-xl bg-cover" />
       </div>
 
       <div class="w-full lg:w-1/2 items-center text-center">
@@ -64,11 +64,11 @@
             <!-- portfolio content -->
 
             <div v-if="showPortfolio" class="flex flex-col gap-4">
-              <div class="md:mt-8 pt-6 md:pt-0">
+              <div class="mt-0 md:mt-8 pt-6 md:pt-0">
                 <a
                   href="https://drive.google.com/file/d/1ASF80I7J9FgQyvJpRXQHkuBmRWLozvua/view?usp=sharing"
                   target="_blank"
-                  class="decoration-inherit cursor-pointer p-4 hover:bg-[#EAE3D2] bg-[#D1B399] w-4 h-4 hover:text-[#99522C] rounded-lg"
+                  class="decoration-inherit cursor-pointer p-[3px] xs:p-4 hover:bg-[#EAE3D2] bg-[#D1B399] w-4 h-4 hover:text-[#99522C] rounded-lg text-[8px] xs:text-[12px] sm:text-[15px]"
                 >
                   View my Resume
                 </a>

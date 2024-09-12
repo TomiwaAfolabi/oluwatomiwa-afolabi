@@ -39,7 +39,6 @@ export default {
     for (var i = 0; i < element.length; i++) {
       var el = element[i];
       element[i].addEventListener("touchstart", (e) => {
-        console.log(e.type);
         if (e.type !== "touchstart") {
           el.classList.add("hover_effect");
         }
