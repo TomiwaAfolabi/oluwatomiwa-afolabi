@@ -42,9 +42,9 @@
           }"
         >
           <div
-            class="w-full h-[11px] xs:h-[16px] max-w-[10px] xs:max-w-[20px] bg-[#c98e5a] border-2 border-[#bf7739] rounded-full cursor-pointer"
+            class="w-full xs:h-[16px] max-w-[10px] xs:max-w-[20px] bg-[#c98e5a] border-2 border-[#bf7739] rounded-full cursor-pointer"
             :class="{
-              '!bg-[#EAE3D2] justify-end border-none mt-[1.5px] mr-[2px] xs:h-[13px]':
+              '!bg-[#EAE3D2] justify-end border-none mt-[1px] mr-[2px] xs:h-[14px]':
                 isTheme,
               ' !bg-black/60  ': isTheme && themeId == '1',
               '': isTheme && themeId == '2',
