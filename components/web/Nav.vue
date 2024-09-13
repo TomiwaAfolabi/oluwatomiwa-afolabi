@@ -33,18 +33,18 @@
           </a>
         </div>
         <div
-          class="w-full flex justify-start mt-[5px] max-w-[25px] xs:max-w-[50px] h-[15px] xs:h-[20px] rounded-full border-2 border-[#D1B399] bg-[#EAE3D2] transition-all ease-in duration-300"
+          class="w-full flex justify-start mt-[5px] max-w-[25px] xs:max-w-[50px] h-[15px] xs:h-[23px] rounded-full border-2 border-[#D1B399] bg-[#EAE3D2] transition-all ease-in duration-300"
           :class="{
-            'bg-[#bf7739] justify-end': isTheme,
+            'bg-[#bf7739] justify-end  xs:!h-[18px]': isTheme,
             ' !bg-white  border-black/60': isTheme && themeId == '1',
             '': isTheme && themeId == '2',
             '': isTheme && themeId == '3',
           }"
         >
           <div
-            class="w-full h-[13px] xs:h-[16px] max-w-[10px] xs:max-w-[20px] bg-[#c98e5a] border-2 border-[#bf7739] rounded-full cursor-pointer"
+            class="w-full h-[11px] xs:h-[19px] max-w-[10px] xs:max-w-[20px] bg-[#c98e5a] border-2 border-[#bf7739] rounded-full cursor-pointer"
             :class="{
-              '!bg-[#EAE3D2] justify-end border-none mt-[1.8px] mr-[2px] xs:h-[12px] ':
+              '!bg-[#EAE3D2] justify-end border-none !mt-[1.9px] mr-[2px]  !h-[8px] xs:!h-[10px]  ':
                 isTheme,
               ' !bg-black/60  ': isTheme && themeId == '1',
               '': isTheme && themeId == '2',
