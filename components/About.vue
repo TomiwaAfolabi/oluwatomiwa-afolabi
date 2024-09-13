@@ -2,10 +2,28 @@
   <div class="mt-10 mb-[290px] flex flex-col gap-20 px-4 py-4">
     <div
       class="w-full max-w-auto lg:max-w-[1150px] bg-[#EAE3D2] rounded-xl flex flex-col mx-auto p-4 sm:p-6"
+      :class="{
+        'text-white !bg-black/[25%]': isTheme && themeId == '1',
+        '': isTheme && themeId == '2',
+        '': isTheme && themeId == '3',
+      }"
     >
-      <div class="border-black border-b-2 flex justify-center mb-2 p-2 text-xl">
+      <div
+        class="border-black border-b-2 flex justify-center mb-2 p-2 text-xl"
+        :class="{
+          'border-white': isTheme && themeId == '1',
+          '': isTheme && themeId == '2',
+          '': isTheme && themeId == '3',
+        }"
+      >
         <div
-          class="flex gap-2 border-black hover:border-inherit border-r-[0.5px] hover:bg-[#D1B399] cursor-pointer"
+          class="flex gap-2 border-black hover:border-inherit border-r-[0.5px] hover:bg-[#D1B399] cursor-pointer p-2"
+          :class="{
+            'text-white hover:!bg-black/[25%] border-white ':
+              isTheme && themeId == '1',
+            '': isTheme && themeId == '2',
+            '': isTheme && themeId == '3',
+          }"
           @click.prevent="toggleEducation"
         >
           <div>
@@ -18,7 +36,13 @@
           <p class="mr-[20px] mt-[2px] hidden md:block">EDUCATION</p>
         </div>
         <div
-          class="flex gap-2 border-black hover:border-inherit border-l-[0.5px] hover:bg-[#D1B399] cursor-pointer"
+          class="flex gap-2 border-black hover:border-inherit border-l-[0.5px] hover:bg-[#D1B399] cursor-pointer p-2"
+          :class="{
+            'text-white hover:!bg-black/[25%] border-white ':
+              isTheme && themeId == '1',
+            '': isTheme && themeId == '2',
+            '': isTheme && themeId == '3',
+          }"
           @click.prevent="toggleExperience"
         >
           <div>
@@ -210,12 +234,21 @@
 </template>
 
 <script>
+import { theme } from "../store/theme";
 export default {
   data() {
     return {
       showExperience: false,
       showEducation: true,
     };
+  },
+  computed: {
+    isTheme() {
+      return theme.state.isTheme;
+    },
+    themeId() {
+      return theme.state.themeNo;
+    },
   },
   methods: {
     toggleEducation() {

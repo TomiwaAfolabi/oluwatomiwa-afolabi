@@ -1,13 +1,28 @@
 <template>
   <div v-for="(project, i) in projectData" :key="i">
-    <NuxtLink class="w-full relative overflow-hidden" :to="project.link">
+    <NuxtLink
+      class="w-full h-full flex relative overflow-hidden"
+      :to="project.link"
+    >
       <div
-        class="relative bg-white/40 p-2 sm:p-6 gap-8 flex justify-center items-center rounded-xl btn cursor-pointer mb-4"
+        class="w-full relative bg-white/40 p-2 sm:p-6 gap-8 flex justify-center items-center btn cursor-pointer mb-4 rounded-xl"
+        :class="{
+          'text-white  before:bg-white': isTheme && themeId == '1',
+          '': isTheme && themeId == '2',
+          '': isTheme && themeId == '3',
+        }"
       >
         <ClientOnly
-          ><div class="w-full h-full absolute hover:opacity-0">
+          ><div
+            class="w-full h-full flex justify-center items-center absolute hover:opacity-0 rounded-xl"
+            :class="{
+              'text-white bg-black/[50%] ': isTheme && themeId == '1',
+              '': isTheme && themeId == '2',
+              '': isTheme && themeId == '3',
+            }"
+          >
             <Icon
-              class="w-[30px] sm:w-[60px] h-[30px] sm:h-[60px] relative top-[40%] md:top-[20%]"
+              class="w-[30px] sm:w-[60px] h-[30px] sm:h-[60px] relative"
               :name="project.icon"
             ></Icon></div
         ></ClientOnly>
@@ -54,6 +69,14 @@ export default {
       type: Array,
       default: [],
     },
+    themeId: {
+      type: String,
+      default: "",
+    },
+    isTheme: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
@@ -72,6 +95,7 @@ export default {
   width: 100%;
   height: 100%;
   background: linear-gradient(#eae3d2, #eae3d2, #eae3d2);
+  border-radius: 20px;
   transition: all 200ms;
 }
 

@@ -1,6 +1,11 @@
 <template>
   <footer
     class="w-full flex justify-center pt-2 pb-2 gap-2 bg-[#EAE3D2] overflow-auto bottom-0"
+    :class="{
+      'text-white !bg-black/[25%]': isTheme && themeId == '1',
+      '': isTheme && themeId == '2',
+      '': isTheme && themeId == '3',
+    }"
   >
     <div
       class="h-auto flex flex-col sm:flex-row gap-0 sm:gap-2 p-2 sm:p-1 overflow-auto"
@@ -38,5 +43,17 @@
     </div>
   </footer>
 </template>
-<script></script>
+<script>
+import { theme } from "../../store/theme";
+export default {
+  computed: {
+    isTheme() {
+      return theme.state.isTheme;
+    },
+    themeId() {
+      return theme.state.themeNo;
+    },
+  },
+};
+</script>
 <style></style>

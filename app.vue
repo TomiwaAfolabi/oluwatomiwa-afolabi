@@ -2,7 +2,7 @@
   <div
     class="mx-none md:mx-auto body bg-[url('~/assets/img/portfolio-bg-image.jpg')]"
   >
-    <div class="flex justify-center p-6"><WebNav /></div>
+    <div class="flex justify-center p-2"><WebNav /></div>
 
     <NuxtPage />
     <WebFooter />

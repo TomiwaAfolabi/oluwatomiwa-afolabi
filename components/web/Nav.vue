@@ -1,8 +1,18 @@
 <template>
   <nav
-    class="w-full max-w-[99%] flex h-[150px] sm:h-[120px] bg-[#EAE3D2] rounded-[8px]"
+    class="w-full max-w-[99%] flex h-[150px] sm:h-[120px] bg-[#EAE3D2] rounded-[8px] transition-all duration-[1000ms] ease-in-out"
+    :class="{
+      'bg-neutral-950/20 ': isTheme && themeId == '1',
+    }"
   >
-    <div class="md:p-4 p-2 flex flex-col gap-2.5 overflow-y-scroll">
+    <div
+      class="md:p-4 p-2 flex flex-col gap-2.5 overflow-y-scroll"
+      :class="{
+        'text-white': isTheme && themeId == '1',
+        '': isTheme && themeId == '2',
+        '': isTheme && themeId == '3',
+      }"
+    >
       <p>Oluwatomiwa Afolabi | Front-End Engineer | AWS Cloud Engineer</p>
       <div class="flex gap-2 flex-wrap">
         <div class="flex gap-2">
@@ -24,10 +34,22 @@
         </div>
         <div
           class="w-full flex justify-start mt-[5px] max-w-[25px] xs:max-w-[50px] h-[15px] xs:h-[20px] rounded-full border-2 border-[#D1B399] bg-[#EAE3D2] transition-all ease-in duration-300"
-          :class="{ 'bg-[#bf7739] justify-end': isTheme }"
+          :class="{
+            'bg-[#bf7739] justify-end': isTheme,
+            ' !bg-white  border-black/60': isTheme && themeId == '1',
+            '': isTheme && themeId == '2',
+            '': isTheme && themeId == '3',
+          }"
         >
           <div
             class="w-full h-[11px] xs:h-[16px] max-w-[10px] xs:max-w-[20px] bg-[#c98e5a] border-2 border-[#bf7739] rounded-full cursor-pointer"
+            :class="{
+              '!bg-[#EAE3D2] justify-end border-none mt-[1.5px] mr-[2px] xs:h-[13px]':
+                isTheme,
+              ' !bg-black/60  ': isTheme && themeId == '1',
+              '': isTheme && themeId == '2',
+              '': isTheme && themeId == '3',
+            }"
             @click="toggleTheme"
           ></div>
         </div>
@@ -40,6 +62,11 @@
         <NuxtLink to="/"
           ><li
             class="hover:bg-[#D1B399] px-8 py-2 pt-2 rounded-lg cursor-pointer hover:scale-110 underline hover:no-underline"
+            :class="{
+              'text-white hover:bg-black/[25%]': isTheme && themeId == '1',
+              '': isTheme && themeId == '2',
+              '': isTheme && themeId == '3',
+            }"
           >
             Home
           </li></NuxtLink
@@ -48,6 +75,11 @@
         <NuxtLink to="/Projects">
           <li
             class="hover:bg-[#D1B399] px-8 py-2 pt-2 rounded-lg cursor-pointer hover:scale-110 underline hover:no-underline"
+            :class="{
+              'text-white hover:bg-black/[25%]': isTheme && themeId == '1',
+              '': isTheme && themeId == '2',
+              '': isTheme && themeId == '3',
+            }"
           >
             Project
           </li></NuxtLink
@@ -55,6 +87,11 @@
         <NuxtLink to="/About"
           ><li
             class="hover:bg-[#D1B399] px-8 py-2 pt-2 rounded-lg cursor-pointer hover:scale-110 underline hover:no-underline"
+            :class="{
+              'text-white hover:bg-black/[25%]': isTheme && themeId == '1',
+              '': isTheme && themeId == '2',
+              '': isTheme && themeId == '3',
+            }"
           >
             About
           </li></NuxtLink
@@ -65,19 +102,34 @@
       <div class="block md:hidden">
         <div
           class="flex justify-end cursor-pointer"
+          :class="{
+            'text-white hover:bg-black/[25%]': isTheme && themeId == '1',
+            '': isTheme && themeId == '2',
+            '': isTheme && themeId == '3',
+          }"
           @click.prevent="toggleDropdown"
         >
           <Icon name="ic:round-table-rows" size="1.5em" />
         </div>
         <!-- dropdown -->
         <div
-          class="w-[110px] bg-[#D1B399] rounded-lg overflow-scroll absolute md:relative right-2"
+          class="w-[100px] bg-[#D1B399] rounded-lg overflow-scroll absolute md:relative right-[20px]"
+          :class="{
+            '!bg-black/[20%] hover:!bg-black/[25%]': isTheme && themeId == '1',
+            '': isTheme && themeId == '2',
+            '': isTheme && themeId == '3',
+          }"
           v-if="showDropdown"
         >
           <ul class="block md:hidden gap-4">
             <NuxtLink to="/" @click.prevent="toggleDropdown"
               ><li
                 class="hover:bg-[#EAE3D2] px-8 py-2 pt-4 rounded-lg cursor-pointer"
+                :class="{
+                  'text-white hover:!bg-black/[15%]': isTheme && themeId == '1',
+                  '': isTheme && themeId == '2',
+                  '': isTheme && themeId == '3',
+                }"
               >
                 Home
               </li></NuxtLink
@@ -85,6 +137,11 @@
             <NuxtLink to="/projects" @click.prevent="toggleDropdown">
               <li
                 class="hover:bg-[#EAE3D2] px-8 py-2 pt-4 rounded-lg cursor-pointer"
+                :class="{
+                  'text-white hover:!bg-black/[15%]': isTheme && themeId == '1',
+                  '': isTheme && themeId == '2',
+                  '': isTheme && themeId == '3',
+                }"
               >
                 Project
               </li></NuxtLink
@@ -92,6 +149,11 @@
             <NuxtLink to="/about" @click.prevent="toggleDropdown"
               ><li
                 class="hover:bg-[#EAE3D2] px-8 py-2 pt-4 rounded-lg cursor-pointer"
+                :class="{
+                  'text-white hover:!bg-black/[15%]': isTheme && themeId == '1',
+                  '': isTheme && themeId == '2',
+                  '': isTheme && themeId == '3',
+                }"
               >
                 About
               </li></NuxtLink
@@ -114,6 +176,9 @@ export default {
   computed: {
     isTheme() {
       return theme.state.isTheme;
+    },
+    themeId() {
+      return theme.state.themeNo;
     },
   },
 
