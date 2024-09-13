@@ -188,7 +188,6 @@ export default {
     },
     toggleTheme() {
       theme.commit("switchTheme");
-      console.log(this.isTheme);
     },
   },
 };
