@@ -17,6 +17,11 @@
         <img
           :src="img"
           class="w-full h-[70vh] sm:h-[99vh] object-cover rounded-xl"
+          :class="{
+            grayscale: isTheme && themeId == '1',
+            '': isTheme && themeId == '2',
+            '': isTheme && themeId == '3',
+          }"
         />
       </div>
 
