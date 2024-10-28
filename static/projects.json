@@ -6,7 +6,7 @@
     "tools": "NextJS - TailwindCSS - Prisma - Postgresql",
     "img": "location-tracker-img.jpg",
     "icon": "map:postal-code-prefix",
-    "link":"https://location-tracking-fe.vercel.app/"
+    "link":"https://loaction-tracking-app.netlify.app"
      },
     {
         "id":"vp",
