@@ -8,6 +8,14 @@
     "icon": "map:postal-code-prefix",
     "link":"https://location-tracking-fe.vercel.app"
      },
+     {
+        "id":"dt",
+    "title": "Administrator Data table",
+    "tools": "Vue3 - SCSS -Pinia ",
+    "img": "user-data-table.png",
+    "icon": "tabler:align-box-center-stretch",
+    "link":"https://user-data-design.netlify.app/"
+     },
     {
         "id":"vp",
     "title": "Vue School Project",
