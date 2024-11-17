@@ -103,7 +103,7 @@
             <div v-if="showPortfolio" class="flex flex-col gap-4">
               <div class="mt-0 md:mt-8 pt-6 md:pt-0">
                 <a
-                  href="https://drive.google.com/file/d/1ASF80I7J9FgQyvJpRXQHkuBmRWLozvua/view?usp=sharing"
+                  href="https://drive.google.com/file/d/13UArVELxGJ3riJSW1fXlcslFlMihIAI5/view?usp=sharing"
                   target="_blank"
                   class="decoration-inherit cursor-pointer p-[3px] xs:p-4 hover:bg-[#EAE3D2] bg-[#D1B399] w-4 h-4 hover:text-[#99522C] rounded-lg text-[8px] xs:text-[12px] sm:text-[15px]"
                   :class="{
