@@ -1,6 +1,13 @@
 
 [
-   
+    {
+    "id":"lt",
+    "title": "Location tracking app",
+    "tools": "NextJS - TailwindCSS - Prisma - Postgresql",
+    "img": "location-tracker-img.jpg",
+    "icon": "map:postal-code-prefix",
+    "link":"https://location-tracking-fe.vercel.app"
+     },
      {
         "id":"dt",
     "title": "Administrator Data table",
