@@ -187,6 +187,16 @@ export default {
       return theme.state.themeNo;
     },
   },
+  watch:{
+   'isTheme'(newVal){
+     if(newVal && !this.showSSpan){
+       this.showSSpan=false;
+     }
+     if(newVal && this.showSSpan){
+       this.showSSpan=false;
+     }
+   }
+  },
 
   methods: {
     toggleDropdown() {
