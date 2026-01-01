@@ -40,9 +40,11 @@
             '': isTheme && themeId == '2',
             '': isTheme && themeId == '3',
           }"
+           @mouseover="showSSpan=true"
+            @mouseleave="showSSpan=false"
         >
           <div
-            class="w-full h-[11px] xs:h-[19px] max-w-[10px] xs:max-w-[20px] bg-[#c98e5a] border-2 border-[#bf7739] rounded-full cursor-pointer"
+            class="relative w-full h-[11px] xs:h-[19px] max-w-[10px] xs:max-w-[20px] bg-[#c98e5a] border-2 border-[#bf7739] rounded-full cursor-pointer"
             :class="{
               '!bg-[#EAE3D2] justify-end border-none !mt-[1.9px] mr-[2px]  !h-[8px] xs:!h-[10px]  ':
                 isTheme,
@@ -51,14 +53,17 @@
               '': isTheme && themeId == '3',
             }"
             @click="toggleTheme"
-          ></div>
+           
+          >
+          <span v-if="showSSpan" class="bg-[#d1a47e] sm:whitespace-nowrap pr-2 pl-2 pt-1 pb-1 rounded-lg absolute -top-9 left-8 border border-[#ede9e2] text-white">Switch Theme</span>
+        </div>
         </div>
       </div>
     </div>
 
     <div class="md:w-full w-1/2 flex justify-end md:p-8 p-4">
       <!-- General NavBar -->
-      <ul class="md:flex hidden gap-4">
+      <ul class="md:flex hidden items-center gap-4">
         <NuxtLink to="/"
           ><li
             class="hover:bg-[#D1B399] px-8 py-2 pt-2 rounded-lg cursor-pointer hover:scale-110 underline hover:no-underline"
@@ -101,7 +106,7 @@
       <!-- dropdwon icon  -->
       <div class="block md:hidden">
         <div
-          class="flex justify-end cursor-pointer"
+          class="flex justify-end items-center cursor-pointer"
           :class="{
             'text-white hover:bg-black/[25%]': isTheme && themeId == '1',
             '': isTheme && themeId == '2',
@@ -113,7 +118,7 @@
         </div>
         <!-- dropdown -->
         <div
-          class="w-[100px] bg-[#D1B399] rounded-lg overflow-scroll absolute md:relative right-[20px]"
+          class="w-[100px] bg-[#D1B399] border border-[#f6e2d1] shadow-xl text-[#625d58] rounded-lg overflow-scroll absolute md:relative right-[20px]"
           :class="{
             '!bg-black/[20%] hover:!bg-black/[25%]': isTheme && themeId == '1',
             '': isTheme && themeId == '2',
@@ -124,9 +129,9 @@
           <ul class="block md:hidden gap-4">
             <NuxtLink to="/" @click.prevent="toggleDropdown"
               ><li
-                class="hover:bg-[#EAE3D2] px-8 py-2 pt-4 rounded-lg cursor-pointer"
+                class="hover:bg-[#EAE3D2] text-center py-2 pt-4 cursor-pointer hover:text-black"
                 :class="{
-                  'text-white hover:!bg-black/[15%]': isTheme && themeId == '1',
+                  'text-white hover:!bg-black/[15%] hover:!text-white': isTheme && themeId == '1',
                   '': isTheme && themeId == '2',
                   '': isTheme && themeId == '3',
                 }"
@@ -136,7 +141,7 @@
             >
             <NuxtLink to="/projects" @click.prevent="toggleDropdown">
               <li
-                class="hover:bg-[#EAE3D2] px-8 py-2 pt-4 rounded-lg cursor-pointer"
+                class="hover:bg-[#EAE3D2] text-center py-2 pt-4  cursor-pointer hover:text-black"
                 :class="{
                   'text-white hover:!bg-black/[15%]': isTheme && themeId == '1',
                   '': isTheme && themeId == '2',
@@ -148,7 +153,7 @@
             >
             <NuxtLink to="/about" @click.prevent="toggleDropdown"
               ><li
-                class="hover:bg-[#EAE3D2] px-8 py-2 pt-4 rounded-lg cursor-pointer"
+                class="hover:bg-[#EAE3D2] text-center py-2 pt-4  cursor-pointer hover:text-black "
                 :class="{
                   'text-white hover:!bg-black/[15%]': isTheme && themeId == '1',
                   '': isTheme && themeId == '2',
@@ -171,6 +176,7 @@ export default {
   data() {
     return {
       showDropdown: false,
+      showSSpan:false,
     };
   },
   computed: {
@@ -189,6 +195,7 @@ export default {
     toggleTheme() {
       theme.commit("switchTheme");
     },
+   
   },
 };
 </script>

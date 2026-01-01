@@ -147,7 +147,7 @@
               private subnet and more.
             </p>
 
-            <div class="flex gap-0 blinker lg:hidden">
+            <div class="flex gap-0 blinker lg:hidden items-center">
               <span class="text-[15px] font-bold text-[#b32727]">Scroll </span>
               <Icon
                 class="md:mr-0 mt-[3px] text-[#b32727]"
@@ -172,7 +172,7 @@
               <br />thereby ensuring flexible programming and clean code.
               <br />• Utilizing GitLab for update and management of webpages.
             </p>
-            <div class="flex gap-0 blinker lg:hidden">
+            <div class="flex gap-0 blinker lg:hidden items-center">
               <span class="text-[15px] font-bold text-[#b32727]">Scroll </span>
               <Icon
                 class="md:mr-0 mt-[3px] text-[#b32727]"
@@ -198,7 +198,7 @@
               of user queries with<br />
               the banking applications.
             </p>
-            <div class="flex gap-0 blinker lg:hidden">
+            <div class="flex gap-0 blinker lg:hidden items-center">
               <span class="text-[15px] font-bold text-[#b32727]">Scroll </span>
               <Icon
                 class="md:mr-0 mt-[3px] text-[#b32727]"
@@ -218,7 +218,7 @@
               for buildings.
               <span class="bg-black text-[15px] font-200 blinker">|</span>
             </p>
-            <div class="flex gap-0 blinker lg:hidden">
+            <div class="flex gap-0 blinker lg:hidden items-center">
               <span class="text-[15px] font-bold text-[#b32727]">Scroll </span>
               <Icon
                 class="md:mr-0 mt-[3px] text-[#b32727]"

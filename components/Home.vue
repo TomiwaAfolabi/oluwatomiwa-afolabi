@@ -167,7 +167,7 @@ export default {
       showPortfolio: true,
       showElevatorPitch: false,
       showSkills: false,
-      images: ["bio-pic.jpg", "profile-pic_2.jpg", "profile-pic.jpg"],
+      images: ["profile-pic-4.jpg", "profile-pic_2.jpg", "profile-pic.jpg"],
       skillData,
     };
   },
